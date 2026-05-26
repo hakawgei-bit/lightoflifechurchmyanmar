@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -13,25 +15,39 @@
       padding:0;
       box-sizing:border-box;
       font-family:Arial, sans-serif;
+      scroll-behavior:smooth;
     }
 
     body{
-      background:linear-gradient(to bottom,#f5f9ff,#edf4ff);
-      color:#222;
+      background:
+      linear-gradient(135deg,#0f172a,#1e3a8a,#312e81);
+
+      color:white;
     }
 
     /* HEADER */
 
     header{
-      background:white;
-      padding:18px 40px;
+
+      background:
+      rgba(15,23,42,0.85);
+
+      backdrop-filter:blur(10px);
+
       display:flex;
       justify-content:space-between;
       align-items:center;
-      box-shadow:0 4px 15px rgba(0,0,0,0.08);
+
+      padding:18px 50px;
+
       position:sticky;
       top:0;
+
       z-index:1000;
+
+      border-bottom:
+      1px solid rgba(255,255,255,0.08);
+
     }
 
     .logo{
@@ -41,129 +57,248 @@
     }
 
     .logo img{
-      width:55px;
-      height:55px;
-      border-radius:50%;
+      width:60px;
+      height:60px;
       object-fit:cover;
+      border-radius:50%;
     }
 
     .logo h2{
-      color:#1d3557;
+      font-size:28px;
+      color:white;
     }
 
     nav a{
+
       text-decoration:none;
-      color:#1d3557;
-      margin-left:25px;
+      color:white;
+
+      margin-left:30px;
+
       font-weight:bold;
+
       transition:0.3s;
+
     }
 
     nav a:hover{
-      color:#e63946;
+      color:#60a5fa;
     }
 
     /* HERO */
 
     .hero{
-      height:550px;
+
+      height:100vh;
+
       background:
-      linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+      linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
       url('hero.jpg') center/cover no-repeat;
 
       display:flex;
       justify-content:center;
       align-items:center;
+
       text-align:center;
-      color:white;
+
       padding:20px;
+
     }
 
     .hero-content h1{
-      font-size:65px;
-      margin-bottom:15px;
+
+      font-size:78px;
+
+      margin-bottom:20px;
+
+      text-shadow:
+      0 0 20px rgba(255,255,255,0.2),
+      0 0 40px rgba(99,102,241,0.4);
+
     }
 
     .hero-content p{
-      font-size:22px;
-      margin-bottom:10px;
+
+      font-size:24px;
+
+      margin-bottom:15px;
+
     }
 
-    .hero-content .verse{
-      font-size:18px;
+    .verse{
+
       opacity:0.9;
+
       margin-top:20px;
+
+      font-size:18px;
+
     }
 
-    /* CONTAINER */
+    .hero-btn{
+
+      display:inline-block;
+
+      margin-top:35px;
+
+      padding:16px 35px;
+
+      background:
+      linear-gradient(to right,#7c3aed,#2563eb);
+
+      border-radius:50px;
+
+      color:white;
+
+      text-decoration:none;
+
+      font-weight:bold;
+
+      transition:0.3s;
+
+      box-shadow:
+      0 10px 25px rgba(0,0,0,0.3);
+
+    }
+
+    .hero-btn:hover{
+
+      transform:translateY(-3px);
+
+    }
+
+    /* MAIN CONTAINER */
 
     .container{
+
       width:90%;
       max-width:1200px;
+
       margin:auto;
-      padding:70px 0;
+
+      padding:90px 0;
+
     }
 
+    /* TITLES */
+
     .section-title{
+
       text-align:center;
-      font-size:38px;
-      color:#1d3557;
-      margin-bottom:35px;
+
+      font-size:48px;
+
+      margin-bottom:45px;
+
+      text-shadow:
+      0 0 20px rgba(255,255,255,0.15);
+
     }
 
     /* ABOUT */
 
     .about{
-      background:white;
-      padding:45px;
-      border-radius:20px;
-      line-height:1.9;
-      box-shadow:0 5px 20px rgba(0,0,0,0.08);
+
+      background:
+      rgba(255,255,255,0.08);
+
+      backdrop-filter:blur(12px);
+
+      border:
+      1px solid rgba(255,255,255,0.1);
+
+      padding:50px;
+
+      border-radius:30px;
+
+      line-height:2;
+
       font-size:18px;
+
+      box-shadow:
+      0 10px 30px rgba(0,0,0,0.3);
+
     }
 
     /* GALLERY */
 
     .gallery{
+
       display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+      grid-template-columns:
+      repeat(auto-fit,minmax(250px,1fr));
+
       gap:25px;
+
       margin-top:40px;
+
     }
 
     .gallery img{
+
       width:100%;
-      height:270px;
+      height:280px;
+
       object-fit:cover;
-      border-radius:18px;
-      transition:0.3s;
-      box-shadow:0 4px 15px rgba(0,0,0,0.15);
+
+      border-radius:20px;
+
+      transition:0.4s;
+
+      box-shadow:
+      0 10px 30px rgba(0,0,0,0.35);
+
     }
 
     .gallery img:hover{
-      transform:scale(1.03);
+
+      transform:
+      scale(1.04)
+      translateY(-5px);
+
     }
 
     /* CONTACT */
 
     .contact{
-      background:white;
-      padding:45px;
-      border-radius:20px;
-      margin-top:50px;
-      box-shadow:0 5px 20px rgba(0,0,0,0.08);
-      line-height:2;
+
+      background:
+      rgba(255,255,255,0.08);
+
+      backdrop-filter:blur(12px);
+
+      border:
+      1px solid rgba(255,255,255,0.1);
+
+      padding:50px;
+
+      border-radius:30px;
+
+      line-height:2.2;
+
       font-size:18px;
+
+      box-shadow:
+      0 10px 30px rgba(0,0,0,0.3);
+
     }
 
     /* FOOTER */
 
     footer{
-      background:linear-gradient(to right,#0f172a,#1d3557);
-      color:white;
+
+      background:black;
+
       text-align:center;
-      padding:35px;
-      margin-top:70px;
+
+      padding:45px;
+
+      margin-top:80px;
+
+      border-top:
+      1px solid rgba(255,255,255,0.08);
+
     }
 
     /* MOBILE */
@@ -171,35 +306,42 @@
     @media(max-width:768px){
 
       header{
+
         flex-direction:column;
         gap:15px;
+
       }
 
       nav{
+
         display:flex;
         flex-wrap:wrap;
         justify-content:center;
-      }
 
-      .hero{
-        height:450px;
       }
 
       .hero-content h1{
-        font-size:42px;
+
+        font-size:48px;
+
       }
 
       .hero-content p{
-        font-size:18px;
+
+        font-size:20px;
+
       }
 
       .section-title{
-        font-size:30px;
+
+        font-size:36px;
+
       }
 
     }
 
   </style>
+
 </head>
 
 <body>
@@ -209,15 +351,20 @@
   <header>
 
     <div class="logo">
+
       <img src="logo.png" alt="">
+
       <h2>Light of Life Church</h2>
+
     </div>
 
     <nav>
+
       <a href="#">Home</a>
       <a href="#about">About</a>
       <a href="#gallery">Gallery</a>
       <a href="#contact">Contact</a>
+
     </nav>
 
   </header>
@@ -233,15 +380,20 @@
       <p>Faith • Worship • Community</p>
 
       <p class="verse">
-        “For where two or three gather in my name, there am I with them.”
+        “For where two or three gather in my name,
+        there am I with them.”
         — Matthew 18:20
       </p>
+
+      <a href="#about" class="hero-btn">
+        Join Us This Sunday
+      </a>
 
     </div>
 
   </section>
 
-  <!-- MAIN -->
+  <!-- MAIN CONTENT -->
 
   <div class="container">
 
@@ -249,7 +401,9 @@
 
     <section id="about">
 
-      <h2 class="section-title">About Us</h2>
+      <h2 class="section-title">
+        About Us
+      </h2>
 
       <div class="about">
 
@@ -262,7 +416,8 @@
         <br>
 
         <p>
-          Our mission is to share the Gospel, help people grow in faith,
+          Our mission is to share the Gospel,
+          help people grow in faith,
           and build a strong spiritual family together.
         </p>
 
@@ -274,7 +429,9 @@
 
     <section id="gallery">
 
-      <h2 class="section-title">Church Gallery</h2>
+      <h2 class="section-title">
+        Church Gallery
+      </h2>
 
       <div class="gallery">
 
@@ -291,13 +448,16 @@
 
     <section id="contact">
 
-      <h2 class="section-title">Contact</h2>
+      <h2 class="section-title">
+        Contact
+      </h2>
 
       <div class="contact">
 
         <p>
           <strong>Address:</strong>
-          TechPark 151, Block-D, Yangon, Myanmar
+          TechPark 151, Block-D,
+          Yangon, Myanmar
         </p>
 
         <p>
@@ -320,9 +480,11 @@
 
   <footer>
 
-    © 2026 Light of Life Church. All Rights Reserved.
+    © 2026 Light of Life Church.
+    All Rights Reserved.
 
   </footer>
 
 </body>
+
 </html>
