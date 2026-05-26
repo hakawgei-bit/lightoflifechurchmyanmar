@@ -3,10 +3,13 @@
 
 <head>
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
   <title>Light of Life Church</title>
+
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 
   <style>
 
@@ -14,14 +17,12 @@
       margin:0;
       padding:0;
       box-sizing:border-box;
-      font-family:Arial, sans-serif;
+      font-family:Arial,sans-serif;
       scroll-behavior:smooth;
     }
 
     body{
-      background:
-      linear-gradient(135deg,#0f172a,#1e3a8a,#312e81);
-
+      background:#050816;
       color:white;
     }
 
@@ -29,52 +30,57 @@
 
     header{
 
-      background:
-      rgba(15,23,42,0.85);
-
-      backdrop-filter:blur(10px);
+      position:fixed;
+      top:0;
+      width:100%;
 
       display:flex;
       justify-content:space-between;
       align-items:center;
 
-      padding:18px 50px;
+      padding:20px 60px;
 
-      position:sticky;
-      top:0;
+      background:rgba(0,0,0,0.45);
+
+      backdrop-filter:blur(10px);
 
       z-index:1000;
-
-      border-bottom:
-      1px solid rgba(255,255,255,0.08);
 
     }
 
     .logo{
+
       display:flex;
       align-items:center;
       gap:15px;
+
     }
 
     .logo img{
+
       width:60px;
       height:60px;
-      object-fit:cover;
+
       border-radius:50%;
+      object-fit:cover;
+
     }
 
     .logo h2{
-      font-size:28px;
+
       color:white;
+      font-size:42px;
+
     }
 
     nav a{
 
-      text-decoration:none;
       color:white;
+      text-decoration:none;
 
-      margin-left:30px;
+      margin-left:35px;
 
+      font-size:18px;
       font-weight:bold;
 
       transition:0.3s;
@@ -82,7 +88,9 @@
     }
 
     nav a:hover{
-      color:#60a5fa;
+
+      color:#ffd43b;
+
     }
 
     /* HERO */
@@ -92,227 +100,345 @@
       height:100vh;
 
       background:
-      linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
-      url('hero.jpg') center/cover no-repeat;
+      linear-gradient(to right,
+      rgba(0,0,0,0.75),
+      rgba(0,0,0,0.35)),
+      url('hero.jpg');
+
+      background-size:cover;
+      background-position:center;
 
       display:flex;
-      justify-content:center;
       align-items:center;
 
-      text-align:center;
+      padding:0 80px;
 
-      padding:20px;
+    }
+
+    .hero-content{
+
+      max-width:700px;
 
     }
 
     .hero-content h1{
 
-      font-size:78px;
-
+      font-size:80px;
       margin-bottom:20px;
 
-      text-shadow:
-      0 0 20px rgba(255,255,255,0.2),
-      0 0 40px rgba(99,102,241,0.4);
+      line-height:1.1;
+
+    }
+
+    .hero-content h3{
+
+      color:#ffd43b;
+
+      font-size:45px;
+
+      margin-bottom:25px;
 
     }
 
     .hero-content p{
 
-      font-size:24px;
+      font-size:22px;
 
-      margin-bottom:15px;
+      line-height:1.7;
+
+      margin-bottom:12px;
 
     }
 
     .verse{
 
-      opacity:0.9;
-
-      margin-top:20px;
-
-      font-size:18px;
+      color:#ffd43b;
+      margin-top:15px;
 
     }
 
-    .hero-btn{
-
-      display:inline-block;
+    .buttons{
 
       margin-top:35px;
 
-      padding:16px 35px;
+      display:flex;
+      gap:20px;
 
-      background:
-      linear-gradient(to right,#7c3aed,#2563eb);
+      flex-wrap:wrap;
 
-      border-radius:50px;
+    }
 
-      color:white;
+    .btn{
+
+      padding:18px 35px;
+
+      border-radius:15px;
 
       text-decoration:none;
 
+      font-size:20px;
       font-weight:bold;
 
       transition:0.3s;
 
-      box-shadow:
-      0 10px 25px rgba(0,0,0,0.3);
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
 
     }
 
-    .hero-btn:hover{
+    .primary{
 
-      transform:translateY(-3px);
+      background:#ffd43b;
+      color:black;
 
     }
 
-    /* MAIN CONTAINER */
+    .primary:hover{
 
-    .container{
+      transform:translateY(-4px);
 
-      width:90%;
-      max-width:1200px;
+    }
+
+    .secondary{
+
+      border:2px solid white;
+      color:white;
+
+    }
+
+    .secondary:hover{
+
+      background:white;
+      color:black;
+
+    }
+
+    /* MAIN SECTION */
+
+    .main{
+
+      width:95%;
+      max-width:1600px;
 
       margin:auto;
 
-      padding:90px 0;
+      margin-top:-80px;
+
+      position:relative;
+      z-index:2;
 
     }
 
-    /* TITLES */
-
-    .section-title{
-
-      text-align:center;
-
-      font-size:48px;
-
-      margin-bottom:45px;
-
-      text-shadow:
-      0 0 20px rgba(255,255,255,0.15);
-
-    }
-
-    /* ABOUT */
-
-    .about{
-
-      background:
-      rgba(255,255,255,0.08);
-
-      backdrop-filter:blur(12px);
-
-      border:
-      1px solid rgba(255,255,255,0.1);
-
-      padding:50px;
-
-      border-radius:30px;
-
-      line-height:2;
-
-      font-size:18px;
-
-      box-shadow:
-      0 10px 30px rgba(0,0,0,0.3);
-
-    }
-
-    /* GALLERY */
-
-    .gallery{
+    .cards{
 
       display:grid;
 
       grid-template-columns:
-      repeat(auto-fit,minmax(250px,1fr));
+      1fr 2fr 1fr;
 
       gap:25px;
 
-      margin-top:40px;
-
     }
 
-    .gallery img{
+    .card{
 
-      width:100%;
-      height:280px;
+      background:
+      linear-gradient(180deg,
+      rgba(8,19,58,0.95),
+      rgba(3,8,30,0.95));
 
-      object-fit:cover;
+      border-radius:25px;
 
-      border-radius:20px;
+      padding:35px;
 
-      transition:0.4s;
+      border:
+      1px solid rgba(255,255,255,0.08);
 
       box-shadow:
       0 10px 30px rgba(0,0,0,0.35);
 
     }
 
-    .gallery img:hover{
+    .card h2{
 
-      transform:
-      scale(1.04)
-      translateY(-5px);
+      font-size:45px;
+      margin-bottom:15px;
 
     }
-    
-    <section id="facebook">
 
-  <h2 class="section-title">
-    Follow Us On Facebook
-  </h2>
+    .line{
 
-  <div style="text-align:center;">
+      width:60px;
+      height:4px;
 
-    <a href="https://www.facebook.com/profile.php?id=61575690664177"
-    target="_blank">
+      background:#ffd43b;
 
-      <img src="facebook-page.jpg"
-      alt="Facebook Page"
+      border-radius:20px;
 
-      style="
+      margin-bottom:25px;
+
+    }
+
+    .about p{
+
+      font-size:22px;
+      line-height:1.8;
+
+      color:#ddd;
+
+    }
+
+    /* GALLERY */
+
+    .gallery-grid{
+
+      display:grid;
+
+      grid-template-columns:
+      repeat(4,1fr);
+
+      gap:18px;
+
+      margin-top:25px;
+
+    }
+
+    .gallery-grid img{
+
       width:100%;
-      max-width:900px;
-      border-radius:25px;
-      margin-top:30px;
+      height:260px;
 
-      box-shadow:
-      0 10px 35px rgba(0,0,0,0.35);
+      object-fit:cover;
+
+      border-radius:18px;
 
       transition:0.3s;
-      ">
 
-    </a>
+    }
 
-  </div>
+    .gallery-grid img:hover{
 
-</section>
+      transform:scale(1.03);
+
+    }
+
+    /* FACEBOOK */
+
+    .facebook-box{
+
+      margin-top:25px;
+
+      background:
+      rgba(255,255,255,0.04);
+
+      border:
+      1px solid rgba(255,255,255,0.08);
+
+      border-radius:20px;
+
+      padding:25px;
+
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+
+      gap:20px;
+
+      flex-wrap:wrap;
+
+    }
+
+    .facebook-left{
+
+      display:flex;
+      align-items:center;
+      gap:20px;
+
+    }
+
+    .facebook-left i{
+
+      font-size:70px;
+      color:#1877f2;
+
+    }
+
+    .facebook-left h3{
+
+      font-size:38px;
+      margin-bottom:8px;
+
+    }
+
+    .facebook-left p{
+
+      color:#ddd;
+      font-size:20px;
+
+    }
+
+    .facebook-btn{
+
+      padding:18px 28px;
+
+      border-radius:15px;
+
+      border:2px solid white;
+
+      color:white;
+
+      text-decoration:none;
+
+      font-size:20px;
+      font-weight:bold;
+
+      transition:0.3s;
+
+    }
+
+    .facebook-btn:hover{
+
+      background:white;
+      color:black;
+
+    }
 
     /* CONTACT */
 
-    .contact{
+    .contact-item{
 
-      background:
-      rgba(255,255,255,0.08);
+      display:flex;
+      gap:20px;
 
-      backdrop-filter:blur(12px);
+      margin-bottom:35px;
 
-      border:
-      1px solid rgba(255,255,255,0.1);
+      align-items:flex-start;
 
-      padding:50px;
+    }
 
-      border-radius:30px;
+    .contact-item i{
 
-      line-height:2.2;
+      font-size:35px;
 
-      font-size:18px;
+      color:#ff4fd8;
 
-      box-shadow:
-      0 10px 30px rgba(0,0,0,0.3);
+      margin-top:5px;
+
+    }
+
+    .contact-item p{
+
+      font-size:24px;
+      line-height:1.7;
+
+      color:#eee;
+
+    }
+
+    .green{
+
+      color:#4dff88 !important;
 
     }
 
@@ -320,27 +446,135 @@
 
     footer{
 
-      background:black;
+      margin-top:70px;
 
-      text-align:center;
+      background:
+      linear-gradient(to right,
+      #18003a,
+      #060b30);
 
-      padding:45px;
+      padding:35px 60px;
 
-      margin-top:80px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
 
-      border-top:
-      1px solid rgba(255,255,255,0.08);
+      flex-wrap:wrap;
+
+      gap:20px;
 
     }
 
+    .footer-left{
+
+      display:flex;
+      align-items:center;
+      gap:18px;
+
+    }
+
+    .footer-left img{
+
+      width:70px;
+      height:70px;
+
+      border-radius:50%;
+
+    }
+
+    .footer-left h3{
+
+      font-size:38px;
+
+    }
+
+    .footer-left p{
+
+      color:#ffd43b;
+      font-size:20px;
+
+    }
+
+    .footer-center{
+
+      font-size:22px;
+
+    }
+
+    .socials{
+
+      display:flex;
+      gap:18px;
+
+    }
+
+    .socials a{
+
+      width:65px;
+      height:65px;
+
+      border-radius:50%;
+
+      display:flex;
+      justify-content:center;
+      align-items:center;
+
+      text-decoration:none;
+
+      color:white;
+
+      font-size:30px;
+
+    }
+
+    .facebook{
+      background:#1877f2;
+    }
+
+    .youtube{
+      background:#ff0000;
+    }
+
+    .instagram{
+      background:#e1306c;
+    }
+
+    .mail{
+      background:#555;
+    }
+
     /* MOBILE */
+
+    @media(max-width:1200px){
+
+      .cards{
+
+        grid-template-columns:1fr;
+
+      }
+
+      .gallery-grid{
+
+        grid-template-columns:
+        repeat(2,1fr);
+
+      }
+
+    }
 
     @media(max-width:768px){
 
       header{
 
+        padding:15px 20px;
         flex-direction:column;
         gap:15px;
+
+      }
+
+      .logo h2{
+
+        font-size:28px;
 
       }
 
@@ -352,21 +586,46 @@
 
       }
 
+      nav a{
+
+        margin:8px 12px;
+
+      }
+
+      .hero{
+
+        padding:0 25px;
+
+      }
+
       .hero-content h1{
 
-        font-size:48px;
+        font-size:55px;
+
+      }
+
+      .hero-content h3{
+
+        font-size:30px;
 
       }
 
       .hero-content p{
 
-        font-size:20px;
+        font-size:18px;
 
       }
 
-      .section-title{
+      .gallery-grid{
 
-        font-size:36px;
+        grid-template-columns:1fr;
+
+      }
+
+      footer{
+
+        flex-direction:column;
+        text-align:center;
 
       }
 
@@ -409,35 +668,52 @@
 
       <h1>Light of Life Church</h1>
 
-      <p>Faith • Worship • Community</p>
+      <h3>Faith • Worship • Community</h3>
 
-      <p class="verse">
+      <p>
         “For where two or three gather in my name,
         there am I with them.”
+      </p>
+
+      <p class="verse">
         — Matthew 18:20
       </p>
 
-      <a href="#about" class="hero-btn">
-        Join Us This Sunday
-      </a>
+      <div class="buttons">
+
+        <a href="#about" class="btn primary">
+          <i class="fa-solid fa-church"></i>
+          Join Us This Sunday
+        </a>
+
+        <a href="https://www.facebook.com/profile.php?id=61575690664177"
+        target="_blank"
+        class="btn secondary">
+
+          <i class="fa-brands fa-facebook"></i>
+          Visit Our Facebook Page
+
+        </a>
+
+      </div>
 
     </div>
 
   </section>
 
-  <!-- MAIN CONTENT -->
+  <!-- MAIN -->
 
-  <div class="container">
+  <div class="main">
 
-    <!-- ABOUT -->
+    <div class="cards">
 
-    <section id="about">
+      <!-- ABOUT -->
 
-      <h2 class="section-title">
-        About Us
-      </h2>
+      <div class="card about" id="about">
 
-      <div class="about">
+        <h2>About Us</h2>
+
+        <div class="line"></div>
 
         <p>
           Welcome to Light of Life Church.
@@ -455,56 +731,100 @@
 
       </div>
 
-    </section>
+      <!-- GALLERY -->
 
-    <!-- GALLERY -->
+      <div class="card" id="gallery">
 
-    <section id="gallery">
+        <h2>Church Gallery</h2>
 
-      <h2 class="section-title">
-        Church Gallery
-      </h2>
+        <div class="line"></div>
 
-      <div class="gallery">
+        <div class="gallery-grid">
 
-        <img src="photo1.jpg" alt="">
-        <img src="photo2.jpg" alt="">
-        <img src="photo3.jpg" alt="">
-        <img src="photo4.jpg" alt="">
+          <img src="photo1.jpg">
+          <img src="photo2.jpg">
+          <img src="photo3.jpg">
+          <img src="photo4.jpg">
+
+        </div>
+
+        <!-- FACEBOOK BOX -->
+
+        <div class="facebook-box">
+
+          <div class="facebook-left">
+
+            <i class="fa-brands fa-facebook"></i>
+
+            <div>
+
+              <h3>Follow Us On Facebook</h3>
+
+              <p>
+                Stay updated with our latest
+                news, worship and events.
+              </p>
+
+            </div>
+
+          </div>
+
+          <a href="https://www.facebook.com/profile.php?id=61575690664177"
+          target="_blank"
+          class="facebook-btn">
+
+            View Our Facebook Page
+
+          </a>
+
+        </div>
 
       </div>
 
-    </section>
+      <!-- CONTACT -->
 
-    <!-- CONTACT -->
+      <div class="card" id="contact">
 
-    <section id="contact">
+        <h2>Contact Us</h2>
 
-      <h2 class="section-title">
-        Contact
-      </h2>
+        <div class="line"></div>
 
-      <div class="contact">
+        <div class="contact-item">
 
-        <p>
-          <strong>Address:</strong>
-          TechPark 151, Block-D,
-          Yangon, Myanmar
-        </p>
+          <i class="fa-solid fa-location-dot"></i>
 
-        <p>
-          <strong>Phone:</strong>
-          +95 9 45630 0737
-        </p>
+          <p>
+            TechPark 151, Block-D,<br>
+            Yawgi Kyaung Lan,<br>
+            Hlaing Township,<br>
+            Yangon, Myanmar
+          </p>
 
-        <p>
-          <strong>Status:</strong>
-          Always Open
-        </p>
+        </div>
+
+        <div class="contact-item">
+
+          <i class="fa-solid fa-phone"></i>
+
+          <p>
+            +95 9 45630 0737
+          </p>
+
+        </div>
+
+        <div class="contact-item">
+
+          <i class="fa-regular fa-clock"></i>
+
+          <p class="green">
+            Always Open
+          </p>
+
+        </div>
 
       </div>
 
-    </section>
+    </div>
 
   </div>
 
@@ -512,8 +832,50 @@
 
   <footer>
 
-    © 2026 Light of Life Church.
-    All Rights Reserved.
+    <div class="footer-left">
+
+      <img src="logo.png">
+
+      <div>
+
+        <h3>Light of Life Church</h3>
+
+        <p>Faith • Worship • Community</p>
+
+      </div>
+
+    </div>
+
+    <div class="footer-center">
+
+      © 2026 Light of Life Church.
+      All Rights Reserved.
+
+    </div>
+
+    <div class="socials">
+
+      <a class="facebook"
+      href="https://www.facebook.com/profile.php?id=61575690664177"
+      target="_blank">
+
+        <i class="fa-brands fa-facebook-f"></i>
+
+      </a>
+
+      <a class="youtube" href="#">
+        <i class="fa-brands fa-youtube"></i>
+      </a>
+
+      <a class="instagram" href="#">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+
+      <a class="mail" href="#">
+        <i class="fa-solid fa-envelope"></i>
+      </a>
+
+    </div>
 
   </footer>
 
